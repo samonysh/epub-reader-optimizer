@@ -1,0 +1,26 @@
+{
+  "name": "epub-reader-optimizer",
+  "version": "1.0.0",
+  "description": "Optimize EPUB layout for Chinese reading: rewrite CSS, normalize bilingual paragraphs, fix formula-as-image display, and harden build tooling.",
+  "author": "Samon Yu",
+  "license": "MIT-0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samonysh/epub-reader-optimizer"
+  },
+  "homepage": "https://github.com/samonysh/epub-reader-optimizer",
+  "keywords": [
+    "epub",
+    "css",
+    "chinese-typesetting",
+    "formula-image",
+    "reading-experience",
+    "book-layout"
+  ],
+  "files": [
+    ".opencode/skills/epub-reader-optimizer/"
+  ],
+  "engines": {
+    "opencode": ">=1.0.0"
+  }
+}

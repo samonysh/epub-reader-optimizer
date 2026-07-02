@@ -1,0 +1,20 @@
+{
+  "artifact": "epub-reader-optimizer",
+  "version": "1.0.0",
+  "generated_at": "2026-07-02T14:52:59.794455Z",
+  "author": "Samon Yu",
+  "license": "MIT-0",
+  "source_repo": "samonysh/epub-reader-optimizer",
+  "security": {
+    "network_default": "off",
+    "host_install_default": "fail-closed",
+    "shell_escape_default": "off"
+  },
+  "artifacts": {
+    "zip": {
+      "filename": "epub-reader-optimizer.zip",
+      "sha256": "498525cbe4d3e11cd964e0a5198124283a93140ce6ed605be9b9c96570e5ba11",
+      "size_bytes": 40307
+    }
+  }
+}
