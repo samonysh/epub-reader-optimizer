@@ -1,0 +1,23 @@
+# 本地维护脚本：从本机安装的 TRAE skill 同步更新到本仓库（含脱敏逻辑），
+# 仅本地使用，不上传到 GitHub。
+sync_from_trae.py
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# 操作系统/编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# 运行产物
+*.epub
+epub_extract/
+epub_optimized/
+output.epub
