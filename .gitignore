@@ -21,3 +21,7 @@ Thumbs.db
 epub_extract/
 epub_optimized/
 output.epub
+.test-scratch/
+.style-review-*/
+*.epubcheck.json
+*.style.json

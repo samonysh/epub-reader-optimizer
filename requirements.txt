@@ -1,0 +1,2 @@
+beautifulsoup4>=4.12
+epubcheck==5.3.0

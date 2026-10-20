@@ -1,0 +1,80 @@
+/* Local compatibility rules layered after epub-translator v1.4.0.
+   Keep this file in sync with the standalone templates via sync_styles.py. */
+html { color-scheme: light; background: #fff !important; }
+body, body.calibre { color: #202b33 !important; background: #fff !important; }
+
+/* Older books use lang attributes instead of translated-zh. Limit resets to
+   prose blocks: a language attribute on html must not resize every heading. */
+p[lang|="zh"], p[xml\:lang|="zh"],
+div.para[lang|="zh"], div.para2[lang|="zh"],
+div.collaboratorsection[lang|="zh"] {
+  color: inherit !important; background: transparent !important;
+  border: 0 !important; border-radius: 0 !important; padding: 0 !important;
+  font-family: inherit !important; font-size: 1em;
+  line-height: 1.78 !important; margin: 0 0 1.05em !important;
+}
+.para, .para1, .para2, .para3, .para5, .para7, .simplepara, .simplepara1 {
+  font-family: inherit !important; font-size: 1em;
+  line-height: 1.7 !important; margin: 0 0 0.95em !important; text-indent: 0;
+}
+.chaptertitle, .chapterTitle { font-size: 1.95rem !important; line-height: 1.4 !important; color: #193b50 !important; }
+.heading1, .heading-1 { font-size: 1.42rem !important; line-height: 1.4 !important; }
+.heading2, .heading-2 { font-size: 1.22rem !important; line-height: 1.4 !important; }
+.heading3, .heading-3 { font-size: 1.08rem !important; line-height: 1.4 !important; }
+.chaptertitle, .chapterTitle, .heading1, .heading2, .heading3 {
+  font-family: "Segoe UI", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif !important;
+  break-after: avoid; page-break-after: avoid;
+}
+.table { max-width: 100%; overflow-x: auto; }
+.tablestyle { border-collapse: collapse; }
+.tablestyle1, .tablestyle2, .tablestyle3, .tablestyle4,
+.tablestyle5, .tablestyle6, .tablestyle7 { padding: 0.6em 0.7em; vertical-align: top; }
+.emphasisfontcategorynonproportional, .EmphasisFontCategoryNonProportional {
+  font-family: "Cascadia Mono", Consolas, "Liberation Mono", monospace !important;
+}
+
+/* Sigil/publisher formula paragraphs: only explicit display containers lose
+   the sentence-height cap. Include the wrapper to outrank upstream inline CSS. */
+p.图, p.sgc-11, p.sgc-3, p.formula-block {
+  text-align: center; text-indent: 0 !important; margin: 0.9em 0 !important;
+  page-break-inside: avoid; break-inside: avoid;
+}
+.formula-block span.math-inline img.formula-img,
+.Equation span.math-inline img.formula-img,
+.equation span.math-inline img.formula-img,
+p.图 span.math-inline img.formula-img,
+p.sgc-11 span.math-inline img.formula-img,
+p.sgc-3 span.math-inline img.formula-img {
+  max-height: none !important; max-width: none !important;
+}
+span.math-formula { display: inline; line-height: inherit; }
+span.math-formula img.formula-img, img[src*="_TeX_IEq"] {
+  display: inline !important; width: auto; height: auto;
+  max-height: 1.45em; vertical-align: middle;
+}
+span.math-tex { display: none; }
+.equation, .equation1, .equationwrapper, .equationcontent {
+  text-align: center; max-width: 100%; overflow-x: auto;
+}
+.reading-equation-scroll .equationcontent img { max-width: none; max-height: none; }
+.reading-equation-scroll > span { display: inline-block; }
+
+/* A nested PRE is content, not a second scroll panel. */
+.reading-code-block .reading-code-content {
+  display: block !important; width: auto !important; overflow: visible !important;
+}
+.reading-code-block .fixedline, .reading-code-block .fixedline1,
+.reading-code-block .copyrightpageissns { margin: 0 !important; padding: 0 !important; }
+
+/* Older formula-image books provide semantic callout/caption classes. */
+p.图题, p.表题, p.代码清单标题 { font-size: 0.89rem; line-height: 1.55 !important; color: #4e626f; }
+p.图题 { text-align: center; }
+p.表题 { font-weight: bold; }
+p.提示, p.强提示, p.超强提示 {
+  border-left: 2px solid #cad7df; padding: 0.5em 0.8em !important;
+  background: #f7f9fa;
+}
+@media (max-width: 35em) {
+  .chaptertitle, .chapterTitle { font-size: 1.65rem !important; }
+  .heading1, .heading-1 { font-size: 1.3rem !important; }
+}
